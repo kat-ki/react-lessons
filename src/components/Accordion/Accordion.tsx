@@ -6,20 +6,12 @@ type AccordionPropsType = {
     collapsed: boolean
 }
 function Accordion(props: AccordionPropsType) {
-    if (props.collapsed) {
     return (
         <>
             <AccordionType title={props.titleValue}/>
+            { !props.collapsed === false && <AccordionOffer title={"Here are our dishes"}/>}
         </>
     )
-    } else {
-         return (
-             <>
-             <AccordionType title={props.titleValue}/>
-             <AccordionOffer title={"Here are our dishes"}/>
-             </>
-         )
-    }
 }
 
 type AccordionTypePropsType = {
