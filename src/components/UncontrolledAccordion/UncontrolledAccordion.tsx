@@ -13,32 +13,32 @@ function UncontrolledAccordion(props: AccordionPropsType) {
 
     return (
         <>
-            <AccordionType title={props.titleValue} onClick={() => {setCollapsed(!collapsed)} }/>
+            <AccordionTitle title={props.titleValue} onClick={() => {setCollapsed(!collapsed)} }/>
 
-            { !collapsed && <AccordionOffer title={"Here are our dishes"}/>}
+            { !collapsed && <AccordionBody title={"MenuC"}/>}
         </>
     )
 }
 
-type AccordionTypePropsType = {
+type AccordionTitlePropsType = {
     title: string
     // collapsed: boolean
     onClick: ()=> void
 }
 
-function AccordionType(props: AccordionTypePropsType) {
+function AccordionTitle(props: AccordionTitlePropsType) {
     return (
-        <div> {props.title}
-            <div>Breakfast</div>
-            <div>Brunch</div>
-            <div>Lunch</div>
-            <div>Dinner</div>
-        </div>
+        <h3 onClick={ ()=>{props.onClick()} }> --{props.title} --</h3>
     )
 }
-function AccordionOffer(props: any) {
+function AccordionBody(props: any) {
     return (
-        <h3 onClick={ ()=>{props.onClick()} }>{props.title}</h3>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
     )
 }
 export default UncontrolledAccordion;
