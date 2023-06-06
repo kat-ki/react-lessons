@@ -15,6 +15,7 @@ function App() {
     let [ratingValue, setRatingValue] = useState<RatingValue>(0);
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false);
     let [on, setOn] = useState(false);
+    let [value, setValue] = useState('1');
     return (
         <div className={"App"}>
             {/*<Page title={"Menu"}/>
@@ -49,7 +50,7 @@ function App() {
             <ControlledInput />
             <ControlledCheckbox />
             <ControlledSelect />
-            <Select value={1} onChange={ ()=> {}  } items={[{title: 'Sin', value: 1}, {title: 'Ga', value: 2}, {title: 'Pur', value: 3} ]}/>
+            <Select value={value} onChange={ setValue } items={[{title: 'Tokyo', value: 1}, {title: 'Singapur', value: 2}, {title: 'Seoul', value: 3} ]}/>
         </div>
     );
 }
