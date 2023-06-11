@@ -4,12 +4,13 @@ import { Rating, RatingValue } from "./components/Rating/Rating";
 import { OnOff } from "./components/OnOff/OnOff";
 import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import { UncontrolledRating } from "./components/UncontrolledRating/UncontrolledRating";
-import { UncontrolledOnOff } from "./UncontrolledOnOff/UncontrolledOnOff";
+import { UncontrolledOnOff } from "./components/UncontrolledOnOff/UncontrolledOnOff";
 import { GetValueFromUncontrolledInputByButtonPress, UncontrolledInput } from "./components/Inputs/UncontrolledInput";
 import { ControlledInput } from "./components/Inputs/ControlledInput";
 import { ControlledCheckbox } from "./components/Inputs/ControlledCheckbox";
 import { ControlledSelect } from "./components/Inputs/ControlledSelect";
 import { Select } from "./components/Select/Select";
+import { Example1 } from "./ReactMemo";
 
 function App() {
     let [ratingValue, setRatingValue] = useState<RatingValue>(0);
@@ -51,6 +52,8 @@ function App() {
             <ControlledCheckbox />
             <ControlledSelect />
             <Select value={value} onChange={ setValue } items={[{title: 'Tokyo', value: 1}, {title: 'Singapur', value: 2}, {title: 'Seoul', value: 3} ]}/>
+
+            <Example1 />
         </div>
     );
 }
