@@ -10,7 +10,8 @@ import { ControlledInput } from "./components/Inputs/ControlledInput";
 import { ControlledCheckbox } from "./components/Inputs/ControlledCheckbox";
 import { ControlledSelect } from "./components/Inputs/ControlledSelect";
 import { Select } from "./components/Select/Select";
-import { Example1 } from "./ReactMemo";
+import { Example1 } from "./components/ReactMemo";
+import { HelpsReactMemo, IndependentCountingWithUseMemo, UseCallbackAction } from "./components/UseMemo-UseCallback";
 
 function App() {
     let [ratingValue, setRatingValue] = useState<RatingValue>(0);
@@ -54,6 +55,9 @@ function App() {
             <Select value={value} onChange={ setValue } items={[{title: 'Tokyo', value: 1}, {title: 'Singapur', value: 2}, {title: 'Seoul', value: 3} ]}/>
 
             <Example1 />
+            <IndependentCountingWithUseMemo />
+            <HelpsReactMemo />
+            <UseCallbackAction />
         </div>
     );
 }
