@@ -13,6 +13,7 @@ import { Select } from "./components/Select/Select";
 import { Example1 } from "./components/ReactMemo";
 import { HelpsReactMemo, IndependentCountingWithUseMemo, UseCallbackAction } from "./components/UseMemo-UseCallback";
 import UseStateExample from "./components/UseState";
+import UseEffectExample from "./components/UseEffect";
 
 function App() {
     let [ratingValue, setRatingValue] = useState<RatingValue>(0);
@@ -60,6 +61,7 @@ function App() {
             <HelpsReactMemo />
             <UseCallbackAction />
             <UseStateExample />
+            <UseEffectExample />
         </div>
     );
 }
