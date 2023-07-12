@@ -12,6 +12,7 @@ import { ControlledSelect } from "./components/Inputs/ControlledSelect";
 import { Select } from "./components/Select/Select";
 import { Example1 } from "./components/ReactMemo";
 import { HelpsReactMemo, IndependentCountingWithUseMemo, UseCallbackAction } from "./components/UseMemo-UseCallback";
+import UseStateExample from "./components/UseState";
 
 function App() {
     let [ratingValue, setRatingValue] = useState<RatingValue>(0);
@@ -32,32 +33,33 @@ function App() {
             <Rating value={4}/>
             <Rating value={5}/>*/}
             {/*<OnOff />*/}
-            <UncontrolledOnOff onChange={setOn} /> {on.toString()}
-            {/*<OnOff on={on} onChange={ setOn } />*/}
-            <Accordion titleValue={"Menu_Contr"}
-                       collapsed={accordionCollapsed}
-                       onChange={() => {
-                           setAccordionCollapsed(!accordionCollapsed)
-                       }}
-                       items={[{ title: 'dore', value: 1 }, { title: 'mifa', value: 2 }, {
-                           title: 'sola',
-                           value: 3
-                       }, { title: 'si', value: 4 }]}
-            onClick={(value)=>{alert(`item with ${value} was clicked`)} }/>
-            <UncontrolledAccordion titleValue={"Menu_Uncontr"} />
-            <Rating value={ratingValue} onClick={setRatingValue} />
-            <UncontrolledRating />
-            <UncontrolledInput />
-            <GetValueFromUncontrolledInputByButtonPress />
-            <ControlledInput />
-            <ControlledCheckbox />
-            <ControlledSelect />
-            <Select value={value} onChange={ setValue } items={[{title: 'Tokyo', value: 1}, {title: 'Singapur', value: 2}, {title: 'Seoul', value: 3} ]}/>
+            {/*<UncontrolledOnOff onChange={setOn} /> {on.toString()}*/}
+            {/*/!*<OnOff on={on} onChange={ setOn } />*!/*/}
+            {/*<Accordion titleValue={"Menu_Contr"}*/}
+            {/*           collapsed={accordionCollapsed}*/}
+            {/*           onChange={() => {*/}
+            {/*               setAccordionCollapsed(!accordionCollapsed)*/}
+            {/*           }}*/}
+            {/*           items={[{ title: 'dore', value: 1 }, { title: 'mifa', value: 2 }, {*/}
+            {/*               title: 'sola',*/}
+            {/*               value: 3*/}
+            {/*           }, { title: 'si', value: 4 }]}*/}
+            {/*onClick={(value)=>{alert(`item with ${value} was clicked`)} }/>*/}
+            {/*<UncontrolledAccordion titleValue={"Menu_Uncontr"} />*/}
+            {/*<Rating value={ratingValue} onClick={setRatingValue} />*/}
+            {/*<UncontrolledRating />*/}
+            {/*<UncontrolledInput />*/}
+            {/*<GetValueFromUncontrolledInputByButtonPress />*/}
+            {/*<ControlledInput />*/}
+            {/*<ControlledCheckbox />*/}
+            {/*<ControlledSelect />*/}
+            {/*<Select value={value} onChange={ setValue } items={[{title: 'Tokyo', value: 1}, {title: 'Singapur', value: 2}, {title: 'Seoul', value: 3} ]}/>*/}
 
-            <Example1 />
+            {/*<Example1 />*/}
             <IndependentCountingWithUseMemo />
             <HelpsReactMemo />
             <UseCallbackAction />
+            <UseStateExample />
         </div>
     );
 }
