@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const  UseEffectExample= () => {
+export const UseEffectExample = () => {
     const [counter, setCounter] = useState(0);
 
     // useEffect: for side effects such as
@@ -30,9 +30,45 @@ const  UseEffectExample= () => {
     return (
         <div>
             <h3>Counter: {counter}</h3>
-            <button onClick={()=> setCounter(counter + 1)}>+</button>
+            <button onClick={() => setCounter(counter + 1)}>+</button>
         </div>
     );
 };
 
-export default UseEffectExample;
+
+export const SetTimeout = () => {
+    const [counter, setCounter] = useState(0);
+
+    useEffect(() => {
+
+        setInterval(() => {
+            setCounter(state => state + 1);
+        }, 2000);
+
+    }, [])
+
+    return (
+        <div>
+            <h3>Counter-setTimeout: {counter}</h3>
+        </div>
+    );
+};
+
+export const GetRealTime = () => {
+    const [today, setToday] = useState(new Date());
+
+    useEffect(() => {
+
+        setInterval(() => {
+            setToday(new Date());
+        }, 1000);
+
+    }, [])
+
+    return (
+        <div>
+            <p>Date: {today.toLocaleDateString()}</p>
+            <p>Time: {today.toLocaleTimeString()}</p>
+        </div>
+    );
+};
