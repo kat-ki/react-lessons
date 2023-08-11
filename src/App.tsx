@@ -14,6 +14,7 @@ import { Example1 } from "./components/ReactMemo";
 import { HelpsReactMemo, IndependentCountingWithUseMemo, UseCallbackAction } from "./components/UseMemo-UseCallback";
 import UseStateExample from "./components/UseState";
 import { GetRealTime, SetTimeout, UseEffectExample } from "./components/UseEffect";
+import Clock from "./components/Clock/Clock";
 
 function App() {
     let [ratingValue, setRatingValue] = useState<RatingValue>(0);
@@ -57,13 +58,14 @@ function App() {
             {/*<Select value={value} onChange={ setValue } items={[{title: 'Tokyo', value: 1}, {title: 'Singapur', value: 2}, {title: 'Seoul', value: 3} ]}/>*/}
 
             {/*<Example1 />*/}
-            <IndependentCountingWithUseMemo />
+            {/*<IndependentCountingWithUseMemo />
             <HelpsReactMemo />
             <UseCallbackAction />
             <UseStateExample />
-            <UseEffectExample />
+            <UseEffectExample />*/}
             {/*<SetTimeout />*/}
             <GetRealTime />
+            <Clock />
         </div>
     );
 }

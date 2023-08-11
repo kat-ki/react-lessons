@@ -59,9 +59,13 @@ export const GetRealTime = () => {
 
     useEffect(() => {
 
-        setInterval(() => {
+        const intervalID = setInterval(() => {
             setToday(new Date());
         }, 1000);
+
+        return () => {
+            clearInterval(intervalID)
+        }
 
     }, [])
 
