@@ -13,7 +13,14 @@ import { Select } from "./components/Select/Select";
 import { Example1 } from "./components/ReactMemo";
 import { HelpsReactMemo, IndependentCountingWithUseMemo, UseCallbackAction } from "./components/UseMemo-UseCallback";
 import UseStateExample from "./components/UseState";
-import { GetRealTime, SetTimeout, UseEffectExample } from "./components/UseEffect";
+import {
+    GetRealTime,
+    KeyTracker,
+    ResetEffect,
+    SetInterval,
+    SetTimeout,
+    UseEffectExample
+} from "./components/UseEffect";
 import Clock from "./components/Clock/Clock";
 
 function App() {
@@ -63,10 +70,13 @@ function App() {
             <UseCallbackAction />
             <UseStateExample />
             <UseEffectExample />*/}
-            {/*<SetTimeout />*/}
+            {/*<SetInterval />*/}
+            <SetTimeout />
            {/* <GetRealTime />*/}
-            <Clock mode={'digital'}/>
-            <Clock mode={'analog'}/>
+            {/*<Clock mode={'digital'}/>
+            <Clock mode={'analog'}/>*/}
+           {/* <ResetEffect />*/}
+            <KeyTracker />
         </div>
     );
 }
