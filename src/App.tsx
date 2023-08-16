@@ -64,8 +64,9 @@ function App() {
             <UseStateExample />
             <UseEffectExample />*/}
             {/*<SetTimeout />*/}
-            <GetRealTime />
-            <Clock />
+           {/* <GetRealTime />*/}
+            <Clock mode={'digital'}/>
+            <Clock mode={'analog'}/>
         </div>
     );
 }
